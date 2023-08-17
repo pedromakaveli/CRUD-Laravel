@@ -11,4 +11,47 @@
 
 O projeto foi feito para práticar os conceitos do CRUD diretamente no framework
 
+## 📝 Entendendo a estrutura
+
+-Migration: Irá conter as tabelas do nosso banco de dados
+-Model: Irá tratar os dados que está sendo passado e fornecer metódos
+-Controller: Irá conter as operações do CRUD e decidir a lógica da aplicação
+-Router: Definirá as rotas da aplicação, métodos(post,get,put ...) e chamará a função do controller responsável por lidar com aquela rota
+
+<h2>Comandos:</h2>
+
+<pre>php artisan make:migration create_nome_table</pre>
+<pre>php artisan make:migration create_nome_table</pre>
+<pre>php artisan migrate:fresh</pre>
+<pre>php artisan make:controller NomeController</pre>
+
+Métodos úteis que a model oferece para utilizarmos no controller
+
+<ul>
+    <li>find()</li>
+    <li>update()</li>
+    <li>delete()</li>
+    <li>create()</li>
+    <li>where()</li>
+    <li>save()</li>
+</ul>
+
+## 📝 Controller tipo resource
+
+Para a facilitação da nossa aplicação em crud o Laravel fornece o –resource que quando passado na criação do nosso controller, cria um arquivo com as principais operações do crud
+
+<h2>Comando:</h2>
+
+<pre>php artisan make:controller –resource</pre>
+<ul>
+    <li>index(): Exibe tudo</li>
+    <li>create(): Cria novo conteúdo e insere no banco de dados</li>
+    <li>show(): Exibe um conteúdo em específico pela $id</li>
+    <li>edit(): Edita um conteúdo</li>
+    <li>update(): Atualiza o novo conteúdo</li>
+</ul>
+
+
+
+
 
