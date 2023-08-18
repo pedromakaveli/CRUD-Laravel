@@ -94,14 +94,4 @@ php artisan make:controller –-resource
 
 ### 🙏 Agradecimentos
 
-<div style="
-    display:flex;
-    align-items: center;
-    gap: 10px;
-">
-
-<div style="height: 5px; width: 5px; border-radius: 5px; background: #606060;"></div>
-<img style="border-radius: 50px;" width="100px" src="https://avatars.githubusercontent.com/u/626206?v=4"/>
-    @guihkx
-
-</div>
+- <img width="80px" valign="middle" src="https://avatars.githubusercontent.com/u/626206?v=4"> [@guihkx](https://github.com/guihkx)
