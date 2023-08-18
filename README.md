@@ -1,57 +1,107 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## Sobre o projeto
 
 O projeto foi feito para práticar os conceitos do CRUD diretamente no framework
 
+## Como utilizar na sua máquina
+
+### Dependências
+
+- `php`
+- `composer`
+- [Banco de dados compatível](https://laravel.com/docs/10.x/database#introduction)
+
+### 📝 Passo-a-passo:
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/pedromakaveli/CRUD-Laravel.git
+    cd CRUD-Laravel
+    ```
+2. Instale as dependências do `composer`:
+    ```bash
+    composer install
+    ```
+3. Gere uma nova chave de criptografia utilizando o Artisan:
+    ```bash
+    php artisan key:generate
+    ```
+4. Renomeie o arquivo `.env.example` para `.env` e edite-o com as credenciais do seu banco de dados:
+    ```ini
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel # Coloque o nome do banco de dados de sua preferência
+    DB_USERNAME=root # Defina o usuário do seu banco de dados
+    DB_PASSWORD= # Defina a senha do seu banco de dados
+    ```
+5. Ligue o servidor MySQL (ou compatível)
+6. Faça a [migração](https://laravel.com/docs/10.x/migrations#introduction) do banco de dados **(AVISO: ESTE COMANDO APAGARÁ TODO O CONTEÚDO DO SEU BANCO DE DADOS DEFINIDO EM `DB_DATABASE`)**
+    ```bash
+    php artisan migrate:fresh
+    ```
+7. Inicie o servidor utilizando o Artisan:
+    ```bash
+    php artisan serve
+    ```
+
 ## 📝 Entendendo a estrutura
 
--Migration: Irá conter as tabelas do nosso banco de dados<br/>
--Model: Irá tratar os dados que está sendo passado e fornecer metódos<br/>
--Controller: Irá conter as operações do CRUD e decidir a lógica da aplicação<br/>
--Router: Definirá as rotas da aplicação, métodos(post,get,put ...) e chamará a função do controller responsável por lidar com aquela rota<br/>
+- Migration: Irá conter as tabelas do nosso banco de dados
+- Model: Irá tratar os dados que está sendo passado e fornecer metódos
+- Controller: Irá conter as operações do CRUD e decidir a lógica da aplicação
+- Router: Definirá as rotas da aplicação, métodos (post, get, put...) e chamará a função do controller responsável por lidar com aquela rota
 
-<h2>Comandos:</h2>
+### Comandos:
 
-<pre>php artisan make:migration create_nome_table</pre>
-<pre>php artisan make:migration create_nome_table</pre>
-<pre>php artisan migrate:fresh</pre>
-<pre>php artisan make:controller NomeController</pre>
+```
+php artisan make:migration create_nome_table
+```
 
-Métodos úteis que a model oferece para utilizarmos no controller
+```
+php artisan migrate:fresh
+```
 
-<ul>
-    <li>find()</li>
-    <li>update()</li>
-    <li>delete()</li>
-    <li>create()</li>
-    <li>where()</li>
-    <li>save()</li>
-</ul>
+```
+php artisan make:controller NomeController
+```
+
+### Métodos úteis que a model oferece para utilizarmos no controller
+
+- `find()`
+- `update()` 
+- `delete()`
+- `create()`
+- `where()`
+- `save()`
 
 ## 📝 Controller tipo resource
 
-Para a facilitação da nossa aplicação em crud o Laravel fornece o –resource que quando passado na criação do nosso controller, cria um arquivo com as principais operações do crud<br/>
+Para a facilitação da nossa aplicação em crud o Laravel fornece o `-–resource` que quando passado na criação do nosso controller, cria um arquivo com as principais operações do crud.
 
-<h2>Comando:</h2>
+### Comando:
 
-<pre>php artisan make:controller –resource</pre>
-<ul>
-    <li>index(): Exibe tudo</li>
-    <li>create(): Cria novo conteúdo e insere no banco de dados</li>
-    <li>show(): Exibe um conteúdo em específico pela $id</li>
-    <li>edit(): Edita um conteúdo</li>
-    <li>update(): Atualiza o novo conteúdo</li>
-</ul>
+```
+php artisan make:controller –-resource
+```
 
+- `index()`: Exibe tudo
+- `create()`: Cria novo conteúdo e insere no banco de dados
+- `show()`: Exibe um conteúdo em específico pela `$id`
+- `edit()`: Edita um conteúdo
+- `update()`: Atualiza o novo conteúdo
 
+### 🙏 Agradecimentos
 
+<div style="
+    display:flex;
+    align-items: center;
+    gap: 10px;
+">
 
+<div style="height: 5px; width: 5px; border-radius: 5px; background: #606060;"></div>
+<img style="border-radius: 50px;" width="100px" src="https://avatars.githubusercontent.com/u/626206?v=4"/>
+    @guihkx
 
+</div>
